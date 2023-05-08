@@ -80,6 +80,9 @@ ul{
   top: 30px;
   /* margin: 10px; */
 }
+.li-menu li{
+  list-style: none;
+}
 @media screen and (max-width: 900px)
 {
   .li-logo-container{
