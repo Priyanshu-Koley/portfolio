@@ -1,8 +1,13 @@
+*{
+  /* font-family: 'PT Sans', sans-serif; */
+  font-family: 'Signika', sans-serif;
+}
 .nav-container{
     display:flex;
     /* justify-content:flex-end;
     align-items:center; */
-    background:#333;
+    background:#19142a;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 10px;
 }
 ul{
@@ -13,7 +18,7 @@ ul{
 }
   ul .li{
     list-style:none;
-    margin: 15px;
+    margin: 15px 0px;
   }
   ul .li a{
     text-decoration:none;
@@ -30,8 +35,8 @@ ul{
     width:100%;
     height:2px;
     background-color:#ddd;
+    transition:all 0.5s;
     transform:scaleX(0);
-    transition: all 0.5s;
     transform-origin:left;
   }
   ul .li a:before{
@@ -44,6 +49,7 @@ ul{
   ul .li a:hover{
     color:#fff;
     font-weight:bold;
+    transition:all 0.1s;
   }
   ul .li a:hover:before,ul .li a:hover:after{
     color:#fff;
@@ -64,14 +70,17 @@ ul{
 }
 .li-container{
   display: flex;
+  padding-top: 10px;
 }
 .menu{
-  filter: invert(100%);
+  filter: invert(80%);
   width: 30px;
 }
 .close{
-  filter: invert(100%);
+  filter: invert(60%);
   width: 20px;
+  margin-right:5px ;
+  margin-top:5px ;
   display: none;
 }
 .li-menu{
@@ -83,6 +92,44 @@ ul{
 .li-menu li{
   list-style: none;
 }
+.li-download{
+  margin: 14px;
+  width: 130px;
+  height: 50px;
+  border-radius: 10px;
+  /* border: none;
+  outline: none; */
+  background-color: #d6223b;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+.li-download:hover{
+  background-color: #ad1c2f;
+}
+.li-download:active{
+  background-color: #b04f5b;
+}
+.nav-dp{
+  display: none;
+  width: 300px;
+  height: 300px;
+  border-radius: 5000px;
+  background-color: #d13f52c7;
+  box-shadow: 0px 0px 50px #000000;
+  overflow: hidden;
+  position: absolute;
+  top: 100px;
+  right: 20%;
+
+}
+.nav-dp img{
+  width: 270px;
+  margin-left: 13px;
+}
+
+
 @media screen and (max-width: 900px)
 {
   .li-logo-container{
@@ -101,12 +148,18 @@ ul{
   .li{
     display: none;
   }
+  .li-download{
+    display: none;
+  }
   .li-logo-container{
     margin: 30px;     
   }
 }
 @media screen and (min-width: 825px) 
 {
+  .li{
+    display: flex;
+  }
   .li-menu{
     display: none;
   }

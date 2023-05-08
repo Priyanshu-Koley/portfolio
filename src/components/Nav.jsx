@@ -1,5 +1,7 @@
 import * as React from 'react';
+import {Link} from 'react-router-dom';
 import './Nav.css';
+import dp from '../images/dp.png';
 import logoP from'../images/logo.png';
 import logoK from'../images/logo1.png';
 import menu from'../images/menu.png';
@@ -13,11 +15,15 @@ export default class Nav extends React.Component
     showMenu(menu) 
     {
         let list=document.getElementsByClassName('li');
+        let download=document.getElementsByClassName('li-download');
+        let navdp=document.getElementsByClassName('nav-dp');
         console.log(list)
         for(let i=0; i<list.length; i++)
         {
             list[i].style.display = 'block';
         }
+        download[0].style.display = 'block';
+        navdp[0].style.display = 'block';
         menu.target.style.display = 'none';
         document.getElementById('close').style.display = 'block';
 
@@ -25,11 +31,15 @@ export default class Nav extends React.Component
     closeMenu(menu) 
     {
         let list=document.getElementsByClassName('li');
+        let download=document.getElementsByClassName('li-download');
+        let navdp=document.getElementsByClassName('nav-dp');
         console.log(list)
         for(let i=0; i<list.length; i++)
         {
             list[i].style.display = 'none';
         }
+        download[0].style.display = 'none';
+        navdp[0].style.display = 'none';
         menu.target.style.display = 'none';
         document.getElementById('menu').style.display = 'block';
 
@@ -49,12 +59,15 @@ export default class Nav extends React.Component
                                 <li ><input type="image" src={close} alt="" className='close' id='close' onClick={this.closeMenu}/></li>
                             </div>
                         </li>
-                        <li className='li'><a href="#">Home</a></li>
-                        <li className='li'><a href="#">Skills</a></li>
-                        <li className='li'><a href="#">Services</a></li>
-                        <li className='li'><a href="#">CV/Resume</a></li>
-                        <li className='li'><a href="#">Contact</a></li>
+                        <li className='li'><Link to='/'><a href="#">Home</a></Link></li>
+                        <li className='li'><Link to='skills'><a href="#">Skills</a></Link></li>
+                        <li className='li'><Link to='/services'><a href="#">Services</a></Link></li>
+                        <li className='li'><Link to='/contact'><a href="#">Contact</a></Link></li>
+                        <button className='li-download '>Download CV</button>
                     </ul>
+                    <div className='nav-dp'>
+                        <img src={dp} alt="" />
+                    </div>
                 </div>
             </>
         );
