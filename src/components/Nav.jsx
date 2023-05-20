@@ -48,23 +48,26 @@ export default class Nav extends React.Component
         return (
             <>
                 <div className='nav-container'>
-                    <ul id='ul'>
-                        <li className='li-container'>
-                            <div className='li-logo-container'>
-                                <li className='li-logo'><a href=""><img src={logoP} alt="Logo" className='logo'/></a></li>
-                                <li className='li-logo'><a href=""><img src={logoK} alt="Logo" className='logo'/></a></li>                    
-                            </div>
-                            <div className='li-menu'>
-                                <li ><input type="image" src={menu} alt="" className='menu' id='menu' onClick={this.showMenu}/></li>
-                                <li ><input type="image" src={close} alt="" className='close' id='close' onClick={this.closeMenu}/></li>
-                            </div>
-                        </li>
-                        <li className='li'><Link to='/'><a href="#">Home</a></Link></li>
-                        <li className='li'><Link to='skills'><a href="#">Skills</a></Link></li>
-                        <li className='li'><Link to='/services'><a href="#">Services</a></Link></li>
-                        <li className='li'><Link to='/contact'><a href="#">Contact</a></Link></li>
-                        <button className='li-download '>Download CV</button>
-                    </ul>
+                    <nav className="shift">
+                        <ul id='ul'>
+                            <li className='li-container'>
+                                <div className='li-logo-container'>
+                                    <li className='li-logo'><a href=""><img src={logoP} alt="Logo" className='logo'/></a></li>
+                                    <li className='li-logo'><a href=""><img src={logoK} alt="Logo" className='logo'/></a></li>                    
+                                </div>
+                                <div className='li-menu'>
+                                    <li ><input type="image" src={menu} alt="" className='menu' id='menu' onClick={this.showMenu}/></li>
+                                    <li ><input type="image" src={close} alt="" className='close' id='close' onClick={this.closeMenu}/></li>
+                                </div>
+                            </li>
+                            <li className='li'><Link to='/'><a href="#">Home</a></Link></li>
+                            <li className='li'><Link to='/skills'><a href="#">Skills</a></Link></li>
+                            <li className='li'><Link to='/projects'><a href="#">Projects</a></Link></li>
+                            <li className='li'><Link to='/services'><a href="#">Services</a></Link></li>
+                            <li className='li'><Link to='/contact'><a href="#">Contact</a></Link></li>
+                            <button className='li-download '>Download CV</button>
+                        </ul>
+                    </nav>
                     <div className='nav-dp'>
                         <img src={dp} alt="" />
                     </div>

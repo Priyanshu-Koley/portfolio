@@ -39,6 +39,9 @@ export default class Nav extends React.Component
                             <p>
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam quaerat odio temporibus ut reprehenderit quidem dolore impedit harum non labore! Repellendus est nam earum, consequuntur ipsa iste ex aliquam qui!
                             </p>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam quaerat odio temporibus ut reprehenderit quidem dolore impedit harum non labore! Repellendus est nam earum, consequuntur ipsa iste ex aliquam qui!
+                            </p>
                             
 
                         
